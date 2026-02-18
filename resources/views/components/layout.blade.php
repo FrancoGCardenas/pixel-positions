@@ -9,27 +9,39 @@
 </head>
 <body class="bg-body text-white">
   <div class="px-10">
+
+    {{-- Navigation area --}}
     <nav class="flex justify-between items-center py-4 border-b border-white/10">
+      
+      {{-- Site logo --}}
       <div>
         <a href="/">
           <img src="{{ Vite::asset('resources/images/logo.svg') }}" alt="logo">
         </a>
       </div>
+
+      {{-- Links to other pages in app --}}
       <div class="space-x-6 font-bold">
         <a href="#">Jobs</a>
         <a href="#">Careers</a>
         <a href="#">Salaries</a>
         <a href="#">Companies</a>
       </div>
+
+      {{-- Link to 'Post a Job' page --}}
       <div>
         <a href="#">
           Post a Job
         </a>
       </div>
+
     </nav>
-    <main class="mt-10 max-w-246.5">
+
+    {{-- Main content --}}
+    <main class="mt-10 max-w-246.5 mx-auto">
       {{ $slot }}
     </main>
+
   </div>
 </body>
 </html>
